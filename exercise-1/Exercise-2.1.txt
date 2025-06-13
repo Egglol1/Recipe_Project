@@ -1,0 +1,33 @@
+1. Write two to three sentences on why Django is so popular among web developers.
+
+Django is a full-stack open-source framework that follows MVT structure. It is built to speed up development and is used by some of the world's top companies. Django also applies Don't Repeat Yourself and Keep It Simple and Short principles for easy-to-understand code.
+
+2. After some research, list five large companies that use Django. Specify what the company’s product or service is and what they use Django for.
+
+  - Instagram: Instagram is a photo-sharing website with an app that is used on many people's phones. Instagram uses Django to optimize its memory usage and web service efficiency.
+  - Mozilla: Mozilla is a browser, similar to Google. Mozilla actually switched from PHP to Django to handle the hundreds of millions of requests it recieves each month.
+  - Spotify: Spotify is a service that hosts and streams music to its users. Spotify uses Django for internal data analysis.
+  - Youtube: Youtube is a video hosting and streaming service. Youtube uses Django's template system to keep the visal presentation of the site the same when they introduce new features.
+  - Reddit: Reddit is a popular forum site. Reddit uses Django to manage user requests.
+
+3. For each of the following scenarios, explain if you would use Django (and why or why not):
+
+  - You need to develop a web application with multiple users. 
+
+  I would use Django for this project because in my research I have found that many popular web services utilize Django to manage a high volume of user requests.
+
+  - You need fast deployment and the ability to make changes as you proceed. 
+
+  I would use Django for this project because of its MVT structure, which enables fast and easy development.
+
+  - You need to build a very basic application, which doesn’t require any database access or file operations. 
+
+  I would NOT use Django for this project, because Django offers so many out-of-the-box solutions that it is a waste to use it in a smiple project such as this.
+
+  - You want to build an application from scratch and want a lot of control over how it works. 
+
+  I would NOT use Django for this project, because with Django I would need to follow the Django Way, and if I wanted control over my project, I would be constrained by its firm structure.
+
+  - You’re about to start working on a big project and are afraid of getting stuck and needing additional support. 
+
+  I would use Django for this project because it is very scalable, has a fixed structure that I can follow, and has good documentation about how to approach its issues.
