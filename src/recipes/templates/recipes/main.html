@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<h1>Recipes List</h1>
+
+<table border="1" cellpadding="5" cellspacing="5">
+  <tr>
+    <td>Recipe Titles</td>
+    <td>Recipe Images</td>
+  </tr>
+  {% for object in object_list %}
+  <tr>
+    <td><a href="{{object.get_absolute_url}}"> {{object.name}} | {{object.description}}</a></td>
+    <td><img src="{{object.pic.url}}" width="200" height="200"></td>
+  </tr>
+  {% endfor %}
+</table>
