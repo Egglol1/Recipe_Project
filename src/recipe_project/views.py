@@ -25,7 +25,7 @@ def login_view(request):
     'form': form,
     'error_message': error_message
   }
-  #load the login page using "context" information
+  #load the login page using 'context' information
   return render(request, 'auth/login.html', context)
 
 def logout_view(request):

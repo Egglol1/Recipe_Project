@@ -7,6 +7,57 @@
 <br>
 <br>
 <br>
+<hr>
+<!-- Search Form -->
+<div class="container mb-5">
+  <h2 class="text-center mb-4">Search for Recipes and Ingredients</h2>
+  <form method="POST" class="row g-3 justify-content-center">
+    {% csrf_token %}
+    <div class="col-md-6">
+      {{ form }}
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </form>
+</div>
+
+<br><!-- Search Results -->
+<div class="container mb-5">
+  {% if recipes_df %}
+    <a href="" class="btn btn-outline-secondary btn-sm">Back</a>
+  <div class="table-responsive">
+    <table class="table table-hover align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>Name</th>
+          <th>Cooking Time</th>
+          <th>Difficulty</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for recipe in recipes_df %}
+        <tr>
+          <td><a href="{{ recipe.id }}">{{ recipe.name }}</a></td>
+          <td>{{ recipe.cooking_time }}</td>
+          <td>{{ recipe.difficulty }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Chart -->
+  <div class="text-center mt-4">
+    <img src="data:image/png;base64, {{ chart|safe }}" class="img-fluid" alt="Recipe Chart">
+  </div>
+  {% else %}
+  <div class="text-center">
+    <h4 class="text-muted">No data</h4>
+  </div>
+  {% endif %}
+</div>
+<br>
 
 <table border="1" cellpadding="5" cellspacing="5">
   <tr>

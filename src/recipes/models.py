@@ -13,7 +13,7 @@ class Ingredient(models.Model):
 class Recipe(models.Model):
   name = models.CharField(max_length=120)
   description = models.TextField(max_length=500, default='Please describe your recipe.')
-  ingredients = models.ManyToManyField(Ingredient)
+  ingredients = models.ManyToManyField(Ingredient, related_name = 'recipes')
   difficulty = models.CharField(max_length=12, choices= difficulty_choices, default='easy')
   cooking_time = models.IntegerField(help_text='in minutes!')
   pic = models.ImageField(upload_to='recipes', default='no_picture.jpg')
