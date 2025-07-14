@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="{% static 'static/home.js'}" defer ></script>
+    <title>
+      Recipe Home
+    </title>
+  </head>
+  <body>
+    <h1>Welcome to my Recipes Page!</h1>
+    <br>
+    <br>
+    <a style = "text-align:center;" href="{%url 'login' %}"> Login </a>
+    <br>
+    <br>
+    <br>
+    <img class="home-img" src="{% static 'recipes/images/home_image.png' %}"
+      alt="home" width="1200" height="300">
+  </body>
+</html>
